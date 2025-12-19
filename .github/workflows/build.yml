@@ -75,7 +75,7 @@ jobs:
         run: ./thunderdome-planning-poker serve &
         env:
           DB_HOST: ${{ matrix.db-host }}
-          APP_DOMAIN: ".127.0.0.1"
+          APP_DOMAIN: ".0.0.0.0"
           COOKIE_SECURE: "false"
           SMTP_ENABLED: "false"
 
@@ -97,5 +97,6 @@ jobs:
           name: playwright-report
           path: e2e/playwright-report/
           retention-days: 30
+
 
 
